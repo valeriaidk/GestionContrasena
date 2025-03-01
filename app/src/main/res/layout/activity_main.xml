@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="#88E1EA"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:gravity="left"
+            android:text="GESTION MEDICOS"
+            android:textColor="#E34FEB"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:src="@drawable/bsd" />
+
+
+    </LinearLayout>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:columnCount="2"
+        android:rowCount="1">
+
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="20dp"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical"
+            >
+            <EditText
+                android:id="@+id/editId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Id. Automatico"/>
+
+            <EditText
+                android:id="@+id/editUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese usuario" />
+
+            <EditText
+                android:id="@+id/editProvedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese Provedor" />
+
+            <EditText
+                android:id="@+id/editContraseña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese Contraseña" />
+
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_column="1"
+            android:layout_row="0"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnRegistrarContraseña"
+                android:src="@android:drawable/ic_input_add"
+                android:backgroundTint="#88E1EA"
+                android:layout_gravity="end"
+                android:layout_column="0"
+                android:layout_marginEnd="10dp"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnEditarContraseña"
+                android:src="@android:drawable/ic_menu_edit"
+                android:backgroundTint="#88E1EA"
+                android:layout_gravity="end"
+                android:layout_column="1"
+                android:layout_marginEnd="10dp"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnEliminarContraseña"
+                android:src="@android:drawable/ic_menu_delete"
+                android:backgroundTint="#88E1EA"
+                android:layout_gravity="end"
+                android:layout_column="2"
+                android:layout_marginEnd="10dp"/>
+
+        </LinearLayout>
+
+    </GridLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LISTA DE CREDENCIALES"
+        android:textSize="20sp"
+        android:textColor="#E34FEB"
+        android:textStyle="bold"
+        android:layout_margin="15dp"/>
+
+    <ListView
+        android:id="@+id/lstListarContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="5dp"
+        />
+
+
+
+</LinearLayout>
