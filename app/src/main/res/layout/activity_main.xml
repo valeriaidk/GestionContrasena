@@ -13,7 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="85dp"
-        android:background="#88E1EA"
+        android:background="#2ECC71"
         android:orientation="horizontal">
 
         <TextView
@@ -22,7 +22,7 @@
             android:layout_margin="30dp"
             android:gravity="left"
             android:text="GESTION MEDICOS"
-            android:textColor="#E34FEB"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
