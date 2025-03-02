@@ -59,7 +59,8 @@
                     android:textStyle="bold"
                     android:text="Usuario Master : "
                     android:layout_marginTop="40dp"
-                    android:layout_marginStart="40dp"/>
+                    android:layout_marginStart="40dp"
+                    android:textColor="@color/black"/>
 
                 <TextView android:layout_column="0" android:layout_row="1"
                     android:layout_height="wrap_content"
@@ -67,7 +68,8 @@
                     android:textStyle="bold"
                     android:text="Contraseña Master : "
                     android:layout_marginTop="20dp"
-                    android:layout_marginStart="40dp"/>
+                    android:layout_marginStart="40dp"
+                    android:textColor="@color/black"/>
 
                 <EditText
                     android:id="@+id/txtUserMaster"
@@ -79,7 +81,10 @@
                     android:layout_marginTop="40dp"
                     android:inputType="number"
                     android:maxLength="8"
-                    />
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:alpha="0.5"/>
+
 
                 <EditText
                     android:id="@+id/txtPassMaster"
@@ -91,6 +96,9 @@
                     android:layout_marginTop="20dp"
                     android:inputType="textPassword"
                     android:maxLength="20"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:alpha="0.5"
                     />
 
             </GridLayout>
@@ -111,6 +119,7 @@
                     android:layout_marginStart="50dp"
                     android:layout_marginTop="30dp"
                     android:backgroundTint="#2ECC71"
+                    android:textColor="@color/white"
                     />
 
                 <Button
@@ -123,6 +132,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="30dp"
                     android:backgroundTint="#2ECC71"
+                    android:textColor="@color/white"
                     />
 
             </GridLayout>

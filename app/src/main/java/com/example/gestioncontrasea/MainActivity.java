@@ -1,11 +1,14 @@
 package com.example.gestioncontrasea;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -123,7 +126,22 @@ public class MainActivity extends AppCompatActivity {
 
     private void actualizarContraseña() {
         List<String> medicos = contraseñajava.obtenerContraseña();
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,medicos );
+
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, medicos) {
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View view = super.getView(position, convertView, parent);
+
+                // Obtener el TextView dentro del ListView
+                TextView textView = view.findViewById(android.R.id.text1);
+
+                // Cambiar color del texto a blanco
+                textView.setTextColor(Color.BLACK);
+
+                return view;
+            }
+        };
+
         lstListarContraseña.setAdapter(adapter);
     }
     private void LimpiarCamposC(){
